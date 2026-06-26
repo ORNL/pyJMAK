@@ -1,0 +1,141 @@
+*DEPVAR
+ 19
+ 1,  RLS
+ 2,  fGrainColumnar
+ 3,  GrainSize
+ 4,  fPhase_Beta
+ 5,  fPhase_AlphaW
+ 6,  fPhase_AlphaGB
+ 7,  fPhase_Alphaprime
+*USER DEFINED FIELD
+**--------------------------------------------------
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_MeltingTemperature"
+ 970., 1000.
+**--------------------------------------------------
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_SolidPhases"
+ "Beta"      , 1.
+ "AlphaW"    , 0.
+ "AlphaGB"   , 0. 
+ "Alphaprime", 0.
+**---------------------------------------------------------------------------------------------------------------------------------------
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Transformations"
+ "BtoM",   MAX,   , -410,  MAX,  , 647., MARTENSITIC, KM,  NO,  1, 1, "Beta", , , "Alphaprime", , ,
+ "BtoAw",  MIN, -410.,   , NONE,  ,  , DIFFUSIONAL, TTT, YES, 1, 1, "Beta", , , "AlphaW", , ,
+ "BtoAgb", MIN, -410.,   , INTERVAL, 815., 970., DIFFUSIONAL, TTT, YES, 1, 1, "Beta", , , "AlphaGB", , ,
+ "MtoBAw", MIN, 0.,      , NONE, ,     ,  DIFFUSIONAL, JMA, NO,  1, 2, "Alphaprime", , , "AlphaW","Beta", ,
+** "AtoB",   NONE,    ,   , MIN,  815, , DIFFUSIONAL, PARABOLIC, NO, 2, 1, "AlphaW", "AlphaGB", ,"Beta", 
+** , ,
+**---------------------------------------------------------------------------------------------------------------------------------------
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Martensitic_KM_Coefficients", LABEL="ABQ_PHASE_TRANS_Trans_BtoM_KM_Coefficients"
+ 0.015
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Martensitic_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_BtoM_TTT_Constants"
+ 0.0440, 0.9765
+*PROPERTY TABLE,  TYPE="ABQ_PHASE_TRANS_Martensitic_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_BtoM_TTT_Diagram"
+ 647., 400.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Martensitic_ParentRetainedFrac", LABEL="ABQ_PHASE_TRANS_Trans_BtoM_ParentRetainedFrac"
+ 0., 	0.
+ 0.25,  0.25
+ 0., 	1.
+**---------------------------------------------------------------------------------------------------------------------------------------
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_JMA_Coefficients", LABEL="ABQ_PHASE_TRANS_Trans_BtoAw_JMA_Coefficients", TEMPERATURE
+** Unit: 1/s^JMA.n, -
+ 0.13566, 2.2526, 700.
+ 0.19050, 2.4983, 820.
+ 0.01872, 2.7124, 904.
+ 0.05874, 1.4833, 931.
+ 0.04186, 1.3859, 950.
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_BtoAw_TTT_Constants"
+ 0.01, 0.5
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_BtoAw_TTT_Diagram", TEMPERATURE
+** Unit: s, s
+ 0.9472, 6.20410,  700.
+ 1.9459, 10.5948,  820.
+ 4.3425, 20.6828,  904.
+ 6.7829, 117.7487, 931.
+ 9.9092, 210.2511, 950.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_ParentEquiFrac", LABEL="ABQ_PHASE_TRANS_Trans_BtoAw_ParentEquiFrac", TEMPERATURE
+ 0.07522308, 0.
+ 0.07552193, 100.
+ 0.07622115, 200.
+ 0.07785706, 300.
+ 0.08168451, 400.
+ 0.09063940, 500.
+ 0.11159068, 600.
+ 0.16060928, 700.
+ 0.27529549, 800.
+ 0.54362071, 900.
+ 0.63045841, 920.
+ 0.73338754, 940.
+ 0.85538995, 960.
+ 1.        , 980.
+ 1.        , 1000.
+**---------------------------------------------------------------------------------------------------------------------------------------
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_JMA_Coefficients", LABEL="ABQ_PHASE_TRANS_Trans_BtoAgb_JMA_Coefficients", TEMPERATURE
+** Unit: 1/s^JMA.n, -
+ 0.0000001, 1.4170, 465.
+ 0.0000217, 1.2524, 575.
+ 0.0000348, 1.4056, 633.
+ 0.0001940, 1.3529, 703.
+ 0.0012151, 1.2491, 830.
+ 0.0019453, 1.0332, 908.
+ 0.0019196, 0.8750, 932.
+ 0.0019402, 0.7944, 950.
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_BtoAgb_TTT_Constants"
+ 0.01, 0.50
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_BtoAgb_TTT_Diagram", TEMPERATURE
+** Unit: s, s
+ 2554.6,  50689.2,  465.
+ 134.60, 3954.96,   575.
+ 56.314, 1144.76,   633.
+ 18.500, 422.832,   703.
+ 5.4272, 160.890,   830.
+ 4.9012, 295.0761,  908.
+ 6.6333, 837.8027,  932.
+ 7.9287, 1635.534,  950.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_ParentEquiFrac", LABEL="ABQ_PHASE_TRANS_Trans_BtoAgb_ParentEquiFrac", TEMPERATURE
+ 0.07522308, 0.
+ 0.07552193, 100.
+ 0.07622115, 200.
+ 0.07785706, 300.
+ 0.08168451, 400.
+ 0.09063940, 500.
+ 0.11159068, 600.
+ 0.16060928, 700.
+ 0.27529549, 800.
+ 0.54362071, 900.
+ 0.63045841, 920.
+ 0.73338754, 940.
+ 0.85538995, 960.
+ 1.        , 980.
+ 1.        , 1000.
+**---------------------------------------------------------------------------------------------------------------------------------------
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_JMA_Coefficients", LABEL="ABQ_PHASE_TRANS_Trans_MtoBAw_JMA_Coefficients", TEMPERATURE
+** Unit: 1/s^JMA.n, -
+ 0.0192, 0.667, 400.
+ 0.0147, 1.106, 500.
+ 0.0246, 1.252, 700.
+ 0.0307, 1.326, 800.
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_MtoBAw_TTT_Constants"
+ 0.05, 0.95
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_MtoBAw_TTT_Diagram", TEMPERATURE
+** Unit: s
+ 4.3633, 1.9416E+3, 400.
+ 3.0955, 0.1224E+3, 500.
+ 1.7984, 0.0463E+3, 700.
+ 1.4727, 0.0316E+3, 800.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_ParentEquiFrac", LABEL="ABQ_PHASE_TRANS_Trans_MtoBAw_ParentEquiFrac", TEMPERATURE
+ 0.99998699, 0.
+ 0.99984156, 100.
+ 0.99807326, 200.
+ 0.97702263, 300.
+ 0.77729986, 400.
+ 0.22270013, 500.
+ 0.02297737, 600.
+ 0.00192673, 700.
+ 0.00015843, 800.
+**---------------------------------------------------------------------------------------------------------------------------------------
+**
+** Field variables
+**
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_FieldVariables"
+ 1, RLS

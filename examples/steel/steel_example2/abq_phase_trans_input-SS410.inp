@@ -1,0 +1,79 @@
+**--------------------------------------------------
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_MeltingTemperature"
+ 1000., 1050.
+**--------------------------------------------------
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_SolidPhases"
+ "Austenite", 1.
+ "Ferrite"  , 0.
+ "Pearlite" , 0.
+ "Bainite"  , 0.
+ "Martensite", 0.
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Transformations"
+ "AtoF", MAX,   , +1.e-5, INTERVAL, 350., 790., DIFFUSIONAL, TTT, NO, 1, 1, "Austenite", , , "Ferrite", , ,                       
+ "AtoM", MAX,   , 0., INTERVAL,     , 350., MARTENSITIC, TTT, NO, 1, 1, "Austenite", , , "Martensite", , ,
+ "FtoA", MIN, 0.,   , MIN     , 790.,     , DIFFUSIONAL, TTT, NO, 1, 1, "Ferrite",   , , "Austenite", , ,
+ "MtoA", MIN, 0.,   , MIN     , 790.,     , DIFFUSIONAL, TTT, NO, 1, 1, "Martensite", , , "Austenite", , ,
+**
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_AtoF_TTT_Constants"
+ 0.05, 0.95
+*PROPERTY TABLE,  TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_AtoF_TTT_Diagram", TEMPERATURE
+ 20000000.000, 10000000000.000,    350.000
+  7999307.865,  3438693109.592,    373.158
+  3199446.316,  1182461030.196,    396.316
+  1279667.804,   406612059.689,    419.474
+   511822.837,   139821408.793,    442.632
+   219374.215,    48080291.499,    465.789
+    90042.968,    16533336.708,    488.947
+    37310.467,     5685307.102,    512.105
+    14530.170,     1955002.636,    535.263
+     5887.562,      672265.409,    558.421
+     2486.537,      221709.789,    581.579
+     1209.834,       72574.635,    604.737
+  	  643.664,       27751.794,    627.895
+  	  407.843,       12241.583,    651.053
+  	  301.867,        7078.809,    674.211
+  	  272.344,        5762.278,    697.368
+  	  300.041,        6762.941,    720.526
+  	  420.956,       10845.856,    743.684
+  	  856.841,       23157.005,    766.842
+      3207.642,       50000.000,    790.000 
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_ParentEquiFrac", LABEL="ABQ_PHASE_TRANS_Trans_AtoF_ParentEquiFrac", TEMPERATURE
+ 0.,  539.
+ 0.5, 637.
+ 1.,  790.
+**
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Martensitic_KM_Coefficients", LABEL="ABQ_PHASE_TRANS_Trans_AtoM_KM_Coefficients"
+ 0.0194
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Martensitic_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_AtoM_TTT_Constants"
+ 0.05, 0.9
+*PROPERTY TABLE,  TYPE="ABQ_PHASE_TRANS_Martensitic_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_AtoM_TTT_Diagram"
+ 350., 280.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Martensitic_ParentRetainedFrac", LABEL="ABQ_PHASE_TRANS_Trans_AtoM_ParentRetainedFrac"
+ 0.000, 0.
+ 0.001, 1.
+**
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_FtoA_TTT_Constants"
+ 0.05, 0.90
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_FtoA_TTT_Diagram", TEMPERATURE
+** Unit: s, s
+ 0.06, 0.5, 790.
+ 0.06, 0.5, 900.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_ParentEquiFrac", LABEL="ABQ_PHASE_TRANS_Trans_FtoA_ParentEquiFrac", TEMPERATURE
+ 1., 790.
+ 0., 900.
+**
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Constants", LABEL="ABQ_PHASE_TRANS_Trans_MtoA_TTT_Constants"
+ 0.05, 0.95
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_TTT_Diagram", LABEL="ABQ_PHASE_TRANS_Trans_MtoA_TTT_Diagram", TEMPERATURE
+** Unit: s, s
+ 0.01, 0.05, 790.
+ 0.01, 0.05, 900.
+*PROPERTY TABLE, TYPE="ABQ_PHASE_TRANS_Diffusional_ParentEquiFrac", LABEL="ABQ_PHASE_TRANS_Trans_MtoA_ParentEquiFrac", TEMPERATURE
+ 1., 790.
+ 0., 900.
+**-----------------------------------------------------
+**
+** Field variables
+**
+*PARAMETER TABLE, TYPE="ABQ_PHASE_TRANS_FieldVariables"
+ 1, RLS

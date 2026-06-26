@@ -1,0 +1,2 @@
+[console_scripts]
+jmak-run = pyJMAK.cli:main

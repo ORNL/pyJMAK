@@ -1,0 +1,24 @@
+[build-system]
+requires = ["setuptools", "wheel"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "pyJMAK"
+version = "0.1.0"
+description = "A Python toolkit for phase transformation modeling using JMAK, TTT, and KM models"
+readme = "README.md"
+requires-python = ">=3.8"
+license = { text = "MIT" }
+authors = [
+    { name="Yousub Lee", email="pg7@ornl.gov" }
+]
+dependencies = [
+    "numpy",
+    "matplotlib"
+]
+
+[project.optional-dependencies]
+test = ["pytest"]
+
+[project.scripts]
+jmak-run = "pyJMAK.cli:main"

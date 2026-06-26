@@ -1,0 +1,13 @@
+cff-version: 1.2.0
+message: "If you use this software, please cite it using the metadata from this file."
+title: "PyJMAK: An Open-Source Python Toolkit for Modeling Solid-State Metallurgical Phase Transformations"
+type: software
+authors:
+  - family-names: Prabhune
+    given-names: Bhagyashree
+  - family-names: Lee
+    given-names: Yousub
+  - family-names: Simunovic
+    given-names: Srdjan
+repository-code: "https://github.com/ORNL/pyJMAK"
+version: "1.0.0"
