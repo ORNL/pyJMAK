@@ -1,6 +1,6 @@
 # pyJMAK — JMAK/KM Metallurgical Phase Transformation Toolkit
 
-Version 7:  A generic framework validated for Ti-4Al-4V and steel. Applicable to heat treatment, with initial phase fractions provided
+A framework validated for Ti-4Al-4V and steel. Applicable to heat treatment, with initial phase fractions provided
 
 A lightweight Python toolkit for simulating solid-state phase transformations using common kinetic models:
 

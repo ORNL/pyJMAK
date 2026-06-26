@@ -1,0 +1,29 @@
+# Python packaging/build artifacts
+*.egg-info/
+dist/
+build/
+*.egg
+
+# Pytest cache
+.pytest_cache/
+
+# Python cache files
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# Coverage/test artifacts
+.coverage
+htmlcov/
+.coverage.*
+.cache/
+
+# IDE/editor files
+.vscode/
+.idea/
+.DS_Store
