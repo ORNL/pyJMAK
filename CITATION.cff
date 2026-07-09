@@ -5,9 +5,10 @@ type: software
 authors:
   - family-names: Prabhune
     given-names: Bhagyashree
-  - family-names: Lee
-    given-names: Yousub
   - family-names: Simunovic
     given-names: Srdjan
+  - family-names: Lee
+    given-names: Yousub
+  
 repository-code: "https://github.com/ORNL/pyJMAK"
 version: "1.0.0"
