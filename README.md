@@ -1,4 +1,4 @@
-# pyJMAK — JMAK/KM Metallurgical Phase Transformation Toolkit
+# pyJMAK — An Open-Source Python Toolkit for Modeling Solid-State Metallurgical Phase Transformations 
 
 A framework validated for Ti-4Al-4V and general steel. Applicable to heat treatment, with initial phase fractions provided
 
