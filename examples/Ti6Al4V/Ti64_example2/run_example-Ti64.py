@@ -22,7 +22,7 @@ os.chdir(path)
 ###############################################################################
 
 #Start
-model = pyJMAK.jmak()
+model = pyJMAK.jmak(VERBOSE=True)
 
 # Load the input file
 model.loadInputFiles(TEMP_FILE, MATERIAL_INPUT_FILE)
