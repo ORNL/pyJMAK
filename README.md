@@ -62,7 +62,7 @@ pip install -e ".[test]" pytest
 
 ### Python API
 ```python
-python3 examples/Ti6Al4V/Ti64_example3/run_example-Ti64.py 
+python3 examples/Ti6Al4V/Ti64_example2/run_example-Ti64.py 
 --------------------
 import pyJMAK
 model = pyJMAK.jmak()
